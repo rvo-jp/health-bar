@@ -1,0 +1,192 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "minecraft:warden",
+            "materials": {
+                "default": "warden",
+                "bioluminescent_layer": "warden_bioluminescent_layer",
+                "health_bar": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/warden/warden",
+                "bioluminescent_layer": "textures/entity/warden/warden_bioluminescent_layer",
+                "spots_1": "textures/entity/warden/warden_pulsating_spots_1",
+                "spots_2": "textures/entity/warden/warden_pulsating_spots_2",
+                "tendrils": "textures/entity/warden/warden_tendrils",
+                "heart": "textures/health_bar/heart",
+                "bar50": "textures/health_bar/bar/50",
+                "bar49": "textures/health_bar/bar/49",
+                "bar48": "textures/health_bar/bar/48",
+                "bar47": "textures/health_bar/bar/47",
+                "bar46": "textures/health_bar/bar/46",
+                "bar45": "textures/health_bar/bar/45",
+                "bar44": "textures/health_bar/bar/44",
+                "bar43": "textures/health_bar/bar/43",
+                "bar42": "textures/health_bar/bar/42",
+                "bar41": "textures/health_bar/bar/41",
+                "bar40": "textures/health_bar/bar/40",
+                "bar39": "textures/health_bar/bar/39",
+                "bar38": "textures/health_bar/bar/38",
+                "bar37": "textures/health_bar/bar/37",
+                "bar36": "textures/health_bar/bar/36",
+                "bar35": "textures/health_bar/bar/35",
+                "bar34": "textures/health_bar/bar/34",
+                "bar33": "textures/health_bar/bar/33",
+                "bar32": "textures/health_bar/bar/32",
+                "bar31": "textures/health_bar/bar/31",
+                "bar30": "textures/health_bar/bar/30",
+                "bar29": "textures/health_bar/bar/29",
+                "bar28": "textures/health_bar/bar/28",
+                "bar27": "textures/health_bar/bar/27",
+                "bar26": "textures/health_bar/bar/26",
+                "bar25": "textures/health_bar/bar/25",
+                "bar24": "textures/health_bar/bar/24",
+                "bar23": "textures/health_bar/bar/23",
+                "bar22": "textures/health_bar/bar/22",
+                "bar21": "textures/health_bar/bar/21",
+                "bar20": "textures/health_bar/bar/20",
+                "bar19": "textures/health_bar/bar/19",
+                "bar18": "textures/health_bar/bar/18",
+                "bar17": "textures/health_bar/bar/17",
+                "bar16": "textures/health_bar/bar/16",
+                "bar15": "textures/health_bar/bar/15",
+                "bar14": "textures/health_bar/bar/14",
+                "bar13": "textures/health_bar/bar/13",
+                "bar12": "textures/health_bar/bar/12",
+                "bar11": "textures/health_bar/bar/11",
+                "bar10": "textures/health_bar/bar/10",
+                "bar09": "textures/health_bar/bar/09",
+                "bar08": "textures/health_bar/bar/08",
+                "bar07": "textures/health_bar/bar/07",
+                "bar06": "textures/health_bar/bar/06",
+                "bar05": "textures/health_bar/bar/05",
+                "bar04": "textures/health_bar/bar/04",
+                "bar03": "textures/health_bar/bar/03",
+                "bar02": "textures/health_bar/bar/02",
+                "bar01": "textures/health_bar/bar/01",
+                "bar00": "textures/health_bar/bar/00",
+                "font9": "textures/health_bar/font/9",
+                "font8": "textures/health_bar/font/8",
+                "font7": "textures/health_bar/font/7",
+                "font6": "textures/health_bar/font/6",
+                "font5": "textures/health_bar/font/5",
+                "font4": "textures/health_bar/font/4",
+                "font3": "textures/health_bar/font/3",
+                "font2": "textures/health_bar/font/2",
+                "font1": "textures/health_bar/font/1",
+                "font0": "textures/health_bar/font/0"
+            },
+            "geometry": {
+                "default": "geometry.warden",
+                "health_bar": "geometry.health_bar"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "variable.animation_speed = Math.min(0.5, 3.0 * query.modified_move_speed);",
+                    "variable.anim_pos_mod = 49.388962;",
+                    "variable.bob = query.life_time * 20;",
+                    "variable.modified_bob = variable.bob * 0.1 * 57.2958;",
+                    "variable.modified_bob_sin = math.sin(variable.modified_bob);",
+                    "variable.modified_bob_cos = math.cos(variable.modified_bob);",
+                    "variable.pi = 180;",
+                    "variable.halfpi = variable.pi / 2.0;",
+                    "variable.tendril_animation_length = 0.5;",
+                    "variable.head_x_rot = (68.7549 * math.cos(query.modified_distance_moved * variable.anim_pos_mod + variable.halfpi) * math.min(0.35, variable.animation_speed)) + (math.sin(variable.bob * 5.72958) * 0.06);",
+                    "variable.head_z_rot = (17.1887 * math.sin(query.modified_distance_moved * variable.anim_pos_mod) * variable.animation_speed) + (Math.cos(variable.bob * 5.72958) * 0.06);",
+                    "variable.body_x_rot = (57.2958 * math.cos(query.modified_distance_moved * variable.anim_pos_mod) * math.min(0.35, variable.animation_speed)) + (math.cos(variable.bob * 5.72958) * 0.025);",
+                    "variable.body_z_rot = (5.72958 * math.sin(query.modified_distance_moved * variable.anim_pos_mod) * variable.animation_speed) + (math.sin(variable.bob * 5.72958) * 0.025);",
+                    "variable.left_leg_x_rot = 57.2958 * math.cos(query.modified_distance_moved * variable.anim_pos_mod) * variable.animation_speed;",
+                    "variable.right_leg_x_rot = 57.2958 * math.cos(query.modified_distance_moved * variable.anim_pos_mod + variable.pi) * variable.animation_speed;",
+                    "variable.left_arm_x_rot = -(45.8366 * math.cos(query.modified_distance_moved * variable.anim_pos_mod) * variable.animation_speed);",
+                    "variable.right_arm_x_rot = -(45.8366 * math.sin(query.modified_distance_moved * variable.anim_pos_mod) * variable.animation_speed);",
+                    "variable.vibration_phase = query.time_since_last_vibration_detection;",
+                    "variable.tendril_animation = variable.vibration_phase < 0.0 ? 0.0 : 1.0 - (math.min(query.time_since_last_vibration_detection, variable.tendril_animation_length) / variable.tendril_animation_length);",
+                    "variable.left_tendril_x_rot = variable.tendril_animation * (math.cos(variable.bob * 128.9155) * variable.pi * 0.1);",
+                    "variable.right_tendril_x_rot = variable.left_tendril_x_rot * -1;",
+                    "variable.spots_1_alpha = 0.25 * math.cos(variable.bob * 2.578);",
+                    "variable.spots_2_alpha = 0.25 * math.cos(variable.bob * 2.578 + 180.0);",
+                    "variable.tendrils_alpha = variable.tendril_animation;",
+                    "variable.heart_alpha = 0.8 * (1.0 - query.heartbeat_phase);",
+                    "v.health_bar_position = 55;",
+                    "v.health_bar_scale = q.model_scale;"
+                ],
+                "animate": [
+                    "base_pose",
+                    {
+                        "move": "!(query.is_emerging || query.is_digging)"
+                    },
+                    "shiver_controller",
+                    "bob",
+                    {
+                        "emerge": "query.is_emerging"
+                    },
+                    "sniff_controller",
+                    {
+                        "dig": "query.is_digging"
+                    },
+                    "roar_controller",
+                    {
+                        "look_at_target": "!(query.is_emerging || query.is_digging)"
+                    },
+                    "melee_attack_controller",
+                    {
+                        "swimming": "query.swim_amount > 0.0"
+                    },
+                    "sonic_boom_controller",
+                    "health_bar"
+                ],
+                "should_update_effects_offscreen": "1.0"
+            },
+            "animations": {
+                "emerge": "animation.warden.emerge",
+                "sniff": "animation.warden.sniff",
+                "sniff_controller": "controller.animation.warden.sniff",
+                "dig": "animation.warden.dig",
+                "roar": "animation.warden.roar",
+                "roar_controller": "controller.animation.warden.roar",
+                "shiver": "animation.warden.shiver",
+                "shiver_controller": "controller.animation.warden.shiver",
+                "base_pose": "animation.humanoid.base_pose.v1.0",
+                "look_at_target": "animation.warden.look_at_target.default",
+                "move": "animation.warden.move",
+                "melee_attack": "animation.warden.attack",
+                "melee_attack_controller": "controller.animation.warden.melee_attacking",
+                "bob": "animation.warden.bob",
+                "swimming": "animation.humanoid.swimming.v1.0",
+                "hurt": "animation.warden.hurt",
+                "hurt_controller": "controller.animation.warden.hurt",
+                "sonic_boom": "animation.warden.sonic_boom",
+                "sonic_boom_controller": "controller.animation.warden.sonic_boom",
+                "health_bar": "animation.health_bar"
+            },
+            "render_controllers": [
+                "controller.render.warden",
+                "controller.render.warden_bioluminescent_layer",
+                "controller.render.warden_spots_1",
+                "controller.render.warden_spots_2",
+                "controller.render.warden_tendrils",
+                "controller.render.warden_heart",
+                "controller.render.health_bar.bar",
+                "controller.render.health_bar.heart",
+                "controller.render.health_bar.digit1",
+                "controller.render.health_bar.digit2",
+                "controller.render.health_bar.digit3"
+            ],
+            "enable_attachables": true,
+            "spawn_egg": {
+                "texture": "spawn_egg_warden"
+            },
+            "sound_effects": {
+                "emerge": "mob.warden.emerge",
+                "sniff": "mob.warden.sniff",
+                "dig": "mob.warden.dig",
+                "roar": "mob.warden.roar",
+                "clicking": "mob.warden.clicking"
+            },
+            "particle_effects": {
+                "digging": "minecraft:warden_dig"
+            }
+        }
+    }
+}

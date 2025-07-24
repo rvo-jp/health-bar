@@ -1,0 +1,1 @@
+zip -r -q health-bar-2.3.2.mcpack entity models render_controllers subpacks textures manifest.json pack_icon.png

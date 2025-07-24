@@ -1,0 +1,33 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Health Bar v2.3.2",
+        "description": "§7Created by §gRvo - contact@rvo.jp§7\nFeedback & updates: §9https://rvo.jp/health-bar/§7\nCompatible with §fv1.21.70",
+        "uuid": "8227C6BC-9F55-4CB9-A63F-C8B46BFE9BD5",
+        "version": [ 2, 3, 2 ],
+        "min_engine_version": [ 1, 21, 70 ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "99327B4F-1B83-41CD-AEFD-696990B9CB8D",
+            "version": [ 2, 3, 2 ]
+        }
+    ],
+    "metadata": {
+        "authors": [ "Rvo" ],
+        "url": "https://rvo.jp/health-bar/"
+    },
+    "subpacks": [
+        {
+            "folder_name": "hide_until_hurt",
+            "name": "Hide Until Hurt",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "always_display",
+            "name": "Always Display",
+            "memory_tier": 0
+        }
+    ]
+}

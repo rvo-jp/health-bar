@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12.0",
+    "animations": {
+        "animation.health_bar": {
+            "loop": true,
+            "bones": {
+                "health_bar": {
+                    "rotation": [ "q.camera_rotation(0)", "q.camera_rotation(1) - q.body_y_rotation", 0 ],
+                    "position": [ 0, "v.health_bar_position", 0 ],
+                    "scale": "0.020 / v.health_bar_scale"
+                }
+            }
+        }
+    }
+}

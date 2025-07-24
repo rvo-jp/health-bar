@@ -1,0 +1,133 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "minecraft:piglin_brute",
+            "materials": {
+                "default": "piglin_brute",
+                "health_bar": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/piglin/piglin_brute",
+                "heart": "textures/health_bar/heart",
+                "bar50": "textures/health_bar/bar/50",
+                "bar49": "textures/health_bar/bar/49",
+                "bar48": "textures/health_bar/bar/48",
+                "bar47": "textures/health_bar/bar/47",
+                "bar46": "textures/health_bar/bar/46",
+                "bar45": "textures/health_bar/bar/45",
+                "bar44": "textures/health_bar/bar/44",
+                "bar43": "textures/health_bar/bar/43",
+                "bar42": "textures/health_bar/bar/42",
+                "bar41": "textures/health_bar/bar/41",
+                "bar40": "textures/health_bar/bar/40",
+                "bar39": "textures/health_bar/bar/39",
+                "bar38": "textures/health_bar/bar/38",
+                "bar37": "textures/health_bar/bar/37",
+                "bar36": "textures/health_bar/bar/36",
+                "bar35": "textures/health_bar/bar/35",
+                "bar34": "textures/health_bar/bar/34",
+                "bar33": "textures/health_bar/bar/33",
+                "bar32": "textures/health_bar/bar/32",
+                "bar31": "textures/health_bar/bar/31",
+                "bar30": "textures/health_bar/bar/30",
+                "bar29": "textures/health_bar/bar/29",
+                "bar28": "textures/health_bar/bar/28",
+                "bar27": "textures/health_bar/bar/27",
+                "bar26": "textures/health_bar/bar/26",
+                "bar25": "textures/health_bar/bar/25",
+                "bar24": "textures/health_bar/bar/24",
+                "bar23": "textures/health_bar/bar/23",
+                "bar22": "textures/health_bar/bar/22",
+                "bar21": "textures/health_bar/bar/21",
+                "bar20": "textures/health_bar/bar/20",
+                "bar19": "textures/health_bar/bar/19",
+                "bar18": "textures/health_bar/bar/18",
+                "bar17": "textures/health_bar/bar/17",
+                "bar16": "textures/health_bar/bar/16",
+                "bar15": "textures/health_bar/bar/15",
+                "bar14": "textures/health_bar/bar/14",
+                "bar13": "textures/health_bar/bar/13",
+                "bar12": "textures/health_bar/bar/12",
+                "bar11": "textures/health_bar/bar/11",
+                "bar10": "textures/health_bar/bar/10",
+                "bar09": "textures/health_bar/bar/09",
+                "bar08": "textures/health_bar/bar/08",
+                "bar07": "textures/health_bar/bar/07",
+                "bar06": "textures/health_bar/bar/06",
+                "bar05": "textures/health_bar/bar/05",
+                "bar04": "textures/health_bar/bar/04",
+                "bar03": "textures/health_bar/bar/03",
+                "bar02": "textures/health_bar/bar/02",
+                "bar01": "textures/health_bar/bar/01",
+                "bar00": "textures/health_bar/bar/00",
+                "font9": "textures/health_bar/font/9",
+                "font8": "textures/health_bar/font/8",
+                "font7": "textures/health_bar/font/7",
+                "font6": "textures/health_bar/font/6",
+                "font5": "textures/health_bar/font/5",
+                "font4": "textures/health_bar/font/4",
+                "font3": "textures/health_bar/font/3",
+                "font2": "textures/health_bar/font/2",
+                "font1": "textures/health_bar/font/1",
+                "font0": "textures/health_bar/font/0"
+            },
+            "geometry": {
+                "default": "geometry.piglin",
+                "health_bar": "geometry.health_bar"
+            },
+            "spawn_egg": {
+                "texture": "spawn_egg_piglin_brute"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+                    "variable.attack = Math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3;",
+                    "variable.attack2 = Math.sin(variable.attack_time * 180.0) * 57.3;",
+                    "variable.z_bob = Math.cos(query.life_time * 103.13244) * 2.865 + 2.865;",
+                    "variable.x_bob = Math.sin(query.life_time * 76.776372) * 2.865;",
+                    "v.health_bar_position = q.is_baby ? 42 : 36;",
+                    "v.health_bar_scale = q.model_scale;"
+                ],
+                "animate": [
+                    {
+                        "humanoid_big_head": "query.is_baby"
+                    },
+                    "move",
+                    "bob",
+                    "look_at_target_controller",
+                    "piglin_attack_controller",
+                    "riding_controller",
+                    "health_bar"
+                ]
+            },
+            "animations": {
+                "move": "animation.piglin.move",
+                "bob": "animation.humanoid.bob",
+                "humanoid_big_head": "animation.humanoid.big_head",
+                "look_at_target_controller": "controller.animation.humanoid.look_at_target",
+                "look_at_target_default": "animation.humanoid.look_at_target.default",
+                "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+                "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+                "piglin_attack_controller": "controller.animation.piglin.attack",
+                "crossbow_hold": "animation.piglin.crossbow.hold",
+                "crossbow_charge": "animation.piglin.crossbow.charge",
+                "melee_attack": "animation.piglin.sword.attack",
+                "hand_attack": "animation.piglin.hand.attack",
+                "riding_controller": "controller.animation.humanoid.riding",
+                "riding.arms": "animation.humanoid.riding.arms",
+                "riding.legs": "animation.humanoid.riding.legs",
+                "health_bar": "animation.health_bar"
+            },
+            "render_controllers": [
+                "controller.render.piglin_brute",
+                "controller.render.health_bar.bar",
+                "controller.render.health_bar.heart",
+                "controller.render.health_bar.digit1",
+                "controller.render.health_bar.digit2",
+                "controller.render.health_bar.digit3"
+            ],
+            "enable_attachables": true
+        }
+    }
+}

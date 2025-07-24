@@ -1,0 +1,91 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.health_bar",
+				"texture_width": 1,
+				"texture_height": 1,
+				"visible_bounds_width": 7,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "health_bar",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bar",
+					"parent": "health_bar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-26, -3.5, 0],
+							"size": [52, 7, 0],
+							"uv": {
+								"south": {"uv": [0, 0], "uv_size": [1, 1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "heart",
+					"parent": "health_bar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [27, -4.5, 0],
+							"size": [9, 9, 0],
+							"uv": {
+								"south": {"uv": [0, 0], "uv_size": [1, 1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "digit1",
+					"parent": "health_bar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-33, -4.5, 0],
+							"size": [7, 9, 0],
+							"uv": {
+								"south": {"uv": [0, 0], "uv_size": [1, 1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "digit2",
+					"parent": "health_bar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-39, -4.5, 0],
+							"size": [7, 9, 0],
+							"uv": {
+								"south": {"uv": [0, 0], "uv_size": [1, 1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "digit3",
+					"parent": "health_bar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-45, -4.5, 0],
+							"size": [7, 9, 0],
+							"uv": {
+								"south": {"uv": [0, 0], "uv_size": [1, 1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
