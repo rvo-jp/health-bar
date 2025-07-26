@@ -7,7 +7,7 @@
                 "health_bar": {
                     "rotation": [ "q.camera_rotation(0)", "q.camera_rotation(1) - q.body_y_rotation", 0 ],
                     "position": [ 0, "v.health_bar_position", 0 ],
-                    "scale": "0.020 / v.health_bar_scale"
+                    "scale": "q.is_in_ui || q.is_invisible || !q.is_alive ? 0 : 0.020 / v.health_bar_scale"
                 }
             }
         }

@@ -120,7 +120,7 @@
             },
             "scripts": {
                 "pre_animation": [
-                    "v.health_bar_position = q.is_baby ? 41 : 38;",
+                    "v.health_bar_position = q.is_baby ? 35 : 32;",
                     "v.health_bar_scale = q.model_scale;"
                 ],
                 "animate": [
