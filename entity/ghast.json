@@ -84,7 +84,6 @@
                 "move": "animation.ghast.move",
                 "scale": "animation.ghast.scale",
                 "move_controller": "controller.animation.ghast.move",
-                "scale_controller": "controller.animation.ghast.scale",
                 "health_bar": "animation.health_bar"
             },
             "render_controllers": [
@@ -102,7 +101,6 @@
                 ],
                 "animate": [
                     "move_controller",
-                    "scale_controller",
                     "health_bar"
                 ]
             }
